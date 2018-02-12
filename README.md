@@ -11,9 +11,9 @@ An interactive shopping node app where MySQL and Node.JS are used to allow users
 **Technologies Used**:
 
 >Javascript
->nodeJS
->MySQL
->npm packages:
->mysql
->inquirer
->cli-table
+nodeJS
+MySQL
+npm packages:
+mysql
+inquirer
+cli-table
