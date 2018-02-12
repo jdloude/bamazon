@@ -34,7 +34,6 @@ function tableCreate() {
                 message: "How many would you like to buy?"
             }])
             .then(function(answer) {
-                console.log(answer);
                 var itemQuanity = answer.quanity;
                 var itemID = answer.buy;
                 var queryStr = 'SELECT * FROM products WHERE ?';
@@ -52,6 +51,8 @@ function tableCreate() {
                             }).then(function(answer) {
                                 if (answer.notEnough === true) {
                                     tableCreate();
+                                } {
+                                    console.log("Thank you for looking at our store! We hope to help you in the future.");
                                 }
                             });
 
@@ -84,6 +85,10 @@ function tableCreate() {
                                 }).then(function(answer) {
                                     if (answer.notEnough === true) {
                                         tableCreate();
+                                    } {
+                                        console.log("Thank you for looking at our store! We hope to help you in the future.");
+                                        process.exit();
+                                        connection.end();
                                     }
                                 });
                         }
