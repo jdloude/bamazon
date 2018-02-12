@@ -24,6 +24,12 @@ The customer is asked how many items they would like to buy of the slected Item 
 If everything goes well you should see a completed outpout and the total cost to thew customer
 ![Screenshot3](https://github.com/jdloude/bamazon/blob/master/Images/Completeorder.png)
 
+If there is not enough inventory of the selected item you will get an error message with a inquirer confirm statement.
+![Screenshot4](https://github.com/jdloude/bamazon/blob/master/Images/PromtafterFailed.png)
+
+If no Item ID is entered you will get another error message with a inquirer confirm statement.
+![Screenshot5](https://github.com/jdloude/bamazon/blob/master/Images/ErrorNoID.png)
+
 ****
 
 **Technologies Used**:
