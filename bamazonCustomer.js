@@ -51,7 +51,7 @@ function tableCreate() {
                             }).then(function(answer) {
                                 if (answer.notEnough === true) {
                                     tableCreate();
-                                } {
+                                } else {
                                     console.log("Thank you for looking at our store! We hope to help you in the future.");
                                 }
                             });
