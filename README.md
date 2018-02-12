@@ -12,7 +12,6 @@ the basic starting commands are:
 ```
 npm install
 node bamazonCustomer.js
-
 ```
 
 Loads the current inventory and displays it into a table format.
