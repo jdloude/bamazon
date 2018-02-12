@@ -28,9 +28,8 @@ The customer is asked how many items they would like to buy of the slected Item 
 **Technologies Used**:
 
 * Javascript
-* nodeJS
 * MySQL
-
+* nodeJS
 * npm packages:
     * mysql
     * inquirer
