@@ -53,6 +53,8 @@ function tableCreate() {
                                     tableCreate();
                                 } else {
                                     console.log("Thank you for looking at our store! We hope to help you in the future.");
+                                    process.exit();
+                                    connection.end();
                                 }
                             });
 
