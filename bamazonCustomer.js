@@ -37,7 +37,6 @@ function tableCreate() {
                 console.log(answer);
                 var itemQuanity = answer.quanity;
                 var itemID = answer.buy;
-                // Query db to confirm that the given item ID exists in the desired quantity
                 var queryStr = 'SELECT * FROM products WHERE ?';
 
                 connection.query(queryStr, { item_id: itemID }, function(err, data) {
