@@ -16,13 +16,13 @@ node bamazonCustomer.js
 ```
 
 Loads the current inventory and displays it into a table format.
-![Screenshot1](https://github.com/jdloude/bamazon/blob/master/images/)
-
-The customer is asked to pick a unique Item ID.
-![Screenshot2](https://github.com/jdloude/bamazon/blob/master/images/)
+![Screenshot1](https://github.com/jdloude/bamazon/blob/master/Images/mainScreen.png)
 
 The customer is asked how many items they would like to buy of the slected Item ID.
-![Screenshot3](https://github.com/jdloude/bamazon/blob/master/images/)
+![Screenshot2](https://github.com/jdloude/bamazon/blob/master/Images/enterQty.png)
+
+If everything goes well you should see a completed outpout and the total cost to thew customer
+![Screenshot3](https://github.com/jdloude/bamazon/blob/master/Images/Completeorder.png)
 
 ****
 
