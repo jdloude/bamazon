@@ -30,7 +30,8 @@ The customer is asked how many items they would like to buy of the slected Item 
 * Javascript
 * nodeJS
 * MySQL
+
 * npm packages:
-* mysql
-* inquirer
-* cli-table
+    * mysql
+    * inquirer
+    * cli-table
