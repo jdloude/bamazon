@@ -10,26 +10,8 @@ var connection = mysql.createConnection({
 });
 connection.connect(function(err) {
     if (err) throw err;
-    // run the start function after the connection is made to prompt the user
     tableCreate();
 });
-/*
-    inquirer
-        .prompt({
-            name: "postOrBid",
-            type: "rawlist",
-            message: "Would you like to [POST] an auction or [BID] on an auction?",
-            choices: ["POST", "BID"]
-        })
-        .then(function(answer) {
-            if (answer.postOrBid.toUpperCase() === "POST") {
-                return;
-            } else {
-                tableCreate();
-                return;
-            }
-        });
-}*/
 
 function tableCreate() {
     connection.query("SELECT * FROM products", function(err, results) {
@@ -61,9 +43,6 @@ function tableCreate() {
                 connection.query(queryStr, { item_id: itemID }, function(err, data) {
                     if (err) throw err;
 
-                    // If the user has selected an invalid item ID, data attay will be empty
-                    // console.log('data = ' + JSON.stringify(data));
-
                     if (data.length === 0) {
                         console.log('ERROR: Invalid Item ID. Please select a valid Item ID.');
                         inquirer
@@ -83,10 +62,8 @@ function tableCreate() {
                         if (itemQuanity <= productData.stock_quantity) {
                             console.log('Congratulations, the product you requested is in stock! Placing order!');
 
-                            // Construct the updating query string
                             var updateQueryStr = 'UPDATE products SET stock_quantity = ' + (productData.stock_quantity - itemQuanity) + ' WHERE item_id = ' + itemID;
 
-                            // Update the inventory
                             connection.query(updateQueryStr, function(err, data) {
                                 if (err) throw err;
 
@@ -94,9 +71,8 @@ function tableCreate() {
                                 console.log('Thank you for shopping with us!');
                                 console.log("\n---------------------------------------------------------------------\n");
 
-                                // End the database connection
                                 connection.end();
-                            })
+                            });
                         } else {
                             console.log('Sorry, there is not enough product in stock, your order can not be placed as is.');
                             console.log('Please modify your order.');
